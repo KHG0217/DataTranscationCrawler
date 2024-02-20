@@ -3,13 +3,38 @@ package com.tapacross.data.transaction.crawler.VO;
 public class dataTranscationVO {
 
 	private String title;
-	private String categoey;
 	private String createDate;
 	private String updateDate;
 	private String hitCount;
+	private String superCategory;
+	private String baseCategory;
+	private String smallCategory;
+	private String etc1;
+	private String etc2;
 	
 	public String getTitle() {
 		return title;
+	}
+	
+	public String getSuperCategory() {
+		return superCategory;
+	}
+
+	public void setSuperCategory(String superCategory) {
+		this.superCategory = superCategory;
+	}
+
+	public String getBaseCategory() {
+		return baseCategory;
+	}
+	public void setBaseCategory(String baseCategory) {
+		this.baseCategory = baseCategory;
+	}
+	public String getSmallCategory() {
+		return smallCategory;
+	}
+	public void setSmallCategory(String smallCategory) {
+		this.smallCategory = smallCategory;
 	}
 	public void setTitle(String title) {
 		this.title = title;
@@ -19,12 +44,6 @@ public class dataTranscationVO {
 	}
 	public void setHitCount(String hitCount) {
 		this.hitCount = hitCount;
-	}
-	public String getCategoey() {
-		return categoey;
-	}
-	public void setCategoey(String categoey) {
-		this.categoey = categoey;
 	}
 	public String getCreateDate() {
 		return createDate;
@@ -38,10 +57,30 @@ public class dataTranscationVO {
 	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
+		
+	public String getEtc1() {
+		return etc1;
+	}
+	public void setEtc1(String etc1) {
+		this.etc1 = etc1;
+	}
+	public String getEtc2() {
+		return etc2;
+	}
+	public void setEtc2(String etc2) {
+		this.etc2 = etc2;
+	}
+
 	@Override
 	public String toString() {
-		return "dataTranscationVO [title=" + title + ", categoey=" + categoey + ", createDate=" + createDate
-				+ ", updateDate=" + updateDate + ", hitCount=" + hitCount + "]";
+		return "dataTranscationVO [title=" + title + ", createDate=" + createDate + ", updateDate=" + updateDate
+				+ ", hitCount=" + hitCount + ", superCategory=" + superCategory + ", baseCategory=" + baseCategory
+				+ ", smallCategory=" + smallCategory + ", etc1=" + etc1 + ", etc2=" + etc2 + ", getTitle()="
+				+ getTitle() + ", getSuperCategory()=" + getSuperCategory() + ", getBaseCategory()=" + getBaseCategory()
+				+ ", getSmallCategory()=" + getSmallCategory() + ", getHitCount()=" + getHitCount()
+				+ ", getCreateDate()=" + getCreateDate() + ", getUpdateDate()=" + getUpdateDate() + ", getEtc1()="
+				+ getEtc1() + ", getEtc2()=" + getEtc2() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
 
 }
