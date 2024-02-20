@@ -30,6 +30,7 @@ public class KdxParser {
 	private String KDX_SUPER_CATEGORY_DATA_API_URL = "https://kdx.kr/category/getCategoryList";
 	private String KDX_BASE_CATEGORY_API_URL = "https://kdx.kr/product/getSpecsList";
 	private String KDX_DATA_API_URL = "https://kdx.kr/product/getProList";
+	private String EXCEL_CREATE_PATH =" C:\\home\\kdx데이터거래소\\";
 
 	public Response parseData(String url, String requestBody) {
 		Response res = null;
@@ -185,12 +186,11 @@ public class KdxParser {
 	 */
 	private void createExcelFile(String excelName, String baseCategory, List<dataTranscationVO> dataList) {
 		try {
-			String rootPath = "C:\\home\\kdx데이터거래소\\";
-					
-			File file = new File(rootPath + excelName);
+	
+			File file = new File(EXCEL_CREATE_PATH + excelName);
 			if (!file.exists()) {
 				this.workbook = new XSSFWorkbook();
-				System.out.println("create excel file, path: " + rootPath + excelName);
+				System.out.println("create excel file, path: " + EXCEL_CREATE_PATH + excelName);
 			}
 			
 			int sheetCount = 2;
@@ -240,7 +240,7 @@ public class KdxParser {
 				
 				rowNum ++;
 			}
-			FileOutputStream outputStream = new FileOutputStream(rootPath + excelName);
+			FileOutputStream outputStream = new FileOutputStream(EXCEL_CREATE_PATH + excelName);
 			this.workbook.write(outputStream);
 			outputStream.close();
 			System.out.println("Add Excel Sheets, Sheets: " + baseCategory);
