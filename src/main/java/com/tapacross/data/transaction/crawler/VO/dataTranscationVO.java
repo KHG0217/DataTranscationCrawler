@@ -11,7 +11,16 @@ public class dataTranscationVO {
 	private String smallCategory;
 	private String etc1;
 	private String etc2;
+	private String price;
 	
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
 	public String getTitle() {
 		return title;
 	}
@@ -75,12 +84,8 @@ public class dataTranscationVO {
 	public String toString() {
 		return "dataTranscationVO [title=" + title + ", createDate=" + createDate + ", updateDate=" + updateDate
 				+ ", hitCount=" + hitCount + ", superCategory=" + superCategory + ", baseCategory=" + baseCategory
-				+ ", smallCategory=" + smallCategory + ", etc1=" + etc1 + ", etc2=" + etc2 + ", getTitle()="
-				+ getTitle() + ", getSuperCategory()=" + getSuperCategory() + ", getBaseCategory()=" + getBaseCategory()
-				+ ", getSmallCategory()=" + getSmallCategory() + ", getHitCount()=" + getHitCount()
-				+ ", getCreateDate()=" + getCreateDate() + ", getUpdateDate()=" + getUpdateDate() + ", getEtc1()="
-				+ getEtc1() + ", getEtc2()=" + getEtc2() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+				+ ", smallCategory=" + smallCategory + ", etc1=" + etc1 + ", etc2=" + etc2 + ", price=" + price + "]";
 	}
+
 
 }
